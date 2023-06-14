@@ -3,22 +3,4 @@
 # #   Shows all processes, for all users, including those
 # #+  which might not have a TTY.
 
-# ps -auxf
-#!/bin/bash
-
-# Use the ps command to display process information
-# -e: Select all processes
-# -o: User-oriented format with custom columns
-#    user: User owning the process
-#    pid: Process ID
-#    %cpu: CPU usage
-#    %mem: Memory usage
-#    vsz: Virtual memory size
-#    rss: Resident set size
-#    tty: Terminal associated with the process
-#    stat: Process status
-#    start: Start time or date
-#    time: Cumulative CPU time
-#    command: Command with all its arguments
-# --forest: Show process hierarchy
-ps -e -o user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
+ps -auxf
