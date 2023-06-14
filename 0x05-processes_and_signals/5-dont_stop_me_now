@@ -1,4 +1,14 @@
-#!/usr/bin/env bash
-# Kills the 4-to_infinity_and_beyond process
+#!/bin/bash
 
-kill "$(pgrep -f 4-to_infinity_and_beyond)"
+# Run the "4-to_infinity_and_beyond" process in the background
+./4-to_infinity_and_beyond &
+
+# Store the PID of the process
+pid=$!
+
+# Sleep for a while to allow the process to run
+sleep 5
+
+# Stop the process
+kill "$pid" > /dev/null 2>&1
+
