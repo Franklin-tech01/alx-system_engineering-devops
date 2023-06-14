@@ -1,4 +1,4 @@
-#!/usr/bin/env/ bash
-#shows ip address in this machine
+#!/usr/bin/env bash
+# Displays all acive IPv4 addresses on the machine.
 
-netstat -4an | tail -n +3 | tr -s " " | cut -d " " -f4 | cut -d":" -f1 | sort | uniq | sed '/0.0.0.0/d''
+ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | cut -b 11-
