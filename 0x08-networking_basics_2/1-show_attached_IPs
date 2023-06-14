@@ -1,4 +1,4 @@
 #!/usr/bin/env/ bash
-#show ip address in this machine
+#shows ip address in this machine
 
 netstat -4an | tail -n +3 | tr -s " " | cut -d " " -f4 | cut -d":" -f1 | sort | uniq | sed '/0.0.0.0/d'
