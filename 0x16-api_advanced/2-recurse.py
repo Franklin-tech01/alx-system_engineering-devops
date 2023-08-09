@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """
 Using reddit's API
 """
 import requests
 after = None
+
 
 def recurse(subreddit, hot_list=[]):
     """returning top ten post titles recursively"""
